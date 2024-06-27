@@ -1,0 +1,245 @@
+<div fxLayout="column" fxLayoutGap="5px" class="pastlist-card-page-style">
+  <div fxLayout="row" fxFlex="50" fxLayoutGap="10px">
+    <div fxLayout="column" fxFlex="17" class="div-border-style">
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="font-bold-div-style"> 
+        <span > Top Usage Items </span>
+        <mat-icon matTooltip="Data View" class="open_in_new-icon" (click)="NavigatetoTransactionDocument('TopUsageItems')">open_in_new</mat-icon>
+      </div>
+      <div fxLayout="row" class="table-div-style" *ngIf="mTopUsageDataSource.length>0">
+        <mat-table #table [dataSource]="mTopUsageDataSource" fxFlex="100" class="table-style" >
+
+          <ng-container matColumnDef="ItemName">
+            <mat-header-cell *matHeaderCellDef fxFlex>Item</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex>
+              <span class="span-truncated-text-style" [matTooltip]=aData.ItemName>{{aData.ItemName}}</span>
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Value">
+            <mat-header-cell *matHeaderCellDef fxFlex="20" class="text-right-align">Value</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex="20" class="text-right-align">
+              <span> {{aData.Value}} </span>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="mDisplayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns:mDisplayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" class="table-div-style" *ngIf="mTopUsageDataSource.length == 0">
+        <mat-icon matTooltip="Refresh" (click)="OnRefreshClick('TopUsage')" class="material-icons" >refresh</mat-icon>
+        <!-- <mat-icon matTooltip="Waiting" (click)="OnRefreshClick('TopUsage')" class="material-icons rotate" >sync</mat-icon> -->
+      </div>
+    </div>
+
+    <div fxLayout="column" fxFlex="17" class="div-border-style">
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="font-bold-div-style"> 
+        <span > Top Purchases / Buying </span>
+        <mat-icon matTooltip="Data View" class="open_in_new-icon" (click)="NavigatetoTransactionDocument('TopPurchasesBuying')">open_in_new</mat-icon>
+      </div>
+      <div fxLayout="row"class="table-div-style" *ngIf="mTopPurchasesBuyingDataSource.length>0">
+        <mat-table #table [dataSource]="mTopPurchasesBuyingDataSource" fxFlex="100" class="table-style" *ngIf="mTopPurchasesBuyingDataSource.length>0">
+
+          <ng-container matColumnDef="ItemName">
+            <mat-header-cell *matHeaderCellDef fxFlex>Item</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex>
+              <span class="span-truncated-text-style" [matTooltip]=aData.ItemName>{{aData.ItemName}}</span>
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Value">
+            <mat-header-cell *matHeaderCellDef fxFlex="20" class="text-right-align">Value</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex="20" class="text-right-align">
+              <span> {{aData.Value}} </span>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="mDisplayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns:mDisplayedColumns;"></mat-row>
+        </mat-table>
+      </div>      
+      <div fxLayout="row" fxLayoutAlign="center center" class="table-div-style" *ngIf="mTopPurchasesBuyingDataSource.length == 0">
+        <mat-icon matTooltip="Refresh" (click)="OnRefreshClick('TopPurchasesBuying')" class="material-icons" >refresh</mat-icon>
+        <!-- <mat-icon matTooltip="Waiting" (click)="OnRefreshClick('TopPurchasesBuying')" class="material-icons rotate" >sync</mat-icon> -->
+      </div>
+    </div>
+
+    <div fxLayout="column" fxFlex="30" class="div-border-style">
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="font-bold-div-style"> 
+        <span > ABC Analysis </span>
+        <mat-icon matTooltip="Data View" class="open_in_new-icon" (click)="NavigatetoTransactionDocument('ABCAnalysis')">open_in_new</mat-icon>
+      </div>
+      <div fxLayout="row" class="table-div-style"  *ngIf="mABCAnalysisDataSource.length>0">
+        <mat-table #table [dataSource]="mABCAnalysisDataSource" fxFlex="100"  class="table-style">
+
+          <ng-container matColumnDef="Item">
+            <mat-header-cell *matHeaderCellDef fxFlex>Item</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex>
+              <span class="span-truncated-text-style" [matTooltip]=aData.ItemName>{{aData.ItemName}}</span>
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Stock">
+            <mat-header-cell *matHeaderCellDef fxFlex="20" class="text-right-align">Stock</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex="20" class="text-right-align">
+              <span> {{aData.Stock}} </span>
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Consumption">
+            <mat-header-cell *matHeaderCellDef fxFlex="20" class="text-right-align">Consumption</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex="20" class="text-right-align">
+              <span> {{aData.Consumption}} </span>
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Purchase">
+            <mat-header-cell *matHeaderCellDef fxFlex="20" class="text-right-align">Purchase</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex="20" class="text-right-align">
+              <span> {{aData.Purchase}} </span>
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="DaySinceConsumed">
+            <mat-header-cell *matHeaderCellDef fxFlex="20" class="text-right-align">Day Since Consumption</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex="20" class="text-right-align">
+              <span> {{aData.DaysinceConsumption}} </span>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="mDisplayedColumnsForABCAnalysis"></mat-header-row>
+          <mat-row *matRowDef="let row; columns:mDisplayedColumnsForABCAnalysis;"></mat-row>
+        </mat-table>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" class="table-div-style" *ngIf="mABCAnalysisDataSource.length == 0">
+        <mat-icon matTooltip="Refresh" (click)="OnRefreshClick('Expensive')" class="material-icons" >refresh</mat-icon>
+        <!-- <mat-icon matTooltip="Waiting" (click)="OnRefreshClick('Expensive')" class="material-icons rotate" >sync</mat-icon> -->
+      </div>
+    </div>
+
+    <div fxLayout="column" fxFlex="17" class="div-border-style">
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="font-bold-div-style"> 
+        <span > ItemCategory </span>
+        <mat-icon matTooltip="Data View" class="open_in_new-icon" (click)="NavigatetoTransactionDocument('ItemCategory')">open_in_new</mat-icon>
+      </div>
+
+      <div fxLayout="row" class="table-div-style" *ngIf="mItemCategoryDataSource.length>0">
+
+        <mat-table #table [dataSource]="mItemCategoryDataSource" fxFlex="100"  class="table-style">
+
+          <ng-container matColumnDef="ItemName">
+            <mat-header-cell *matHeaderCellDef fxFlex>ItemCategory</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex>
+              <span class="span-truncated-text-style" [matTooltip]=aData.ItemCategory>{{aData.ItemCategory}}</span>
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Value">
+            <mat-header-cell *matHeaderCellDef fxFlex="20" class="text-right-align">Value</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex="20" class="text-right-align">
+              <span> {{aData.UID}} </span>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="mDisplayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns:mDisplayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" class="table-div-style" *ngIf="mItemCategoryDataSource.length == 0">
+        <mat-icon matTooltip="Refresh" (click)="OnRefreshClick('ItemCategory')" class="material-icons" >refresh</mat-icon>
+        <!-- <mat-icon matTooltip="Waiting" (click)="OnRefreshClick('ItemCategory')" class="material-icons rotate" >sync</mat-icon> -->
+      </div>
+    </div>
+
+    <div fxLayout="column" fxFlex="17" class="div-border-style">
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="font-bold-div-style"> 
+        <span fxLayout="row" fxFlex="85" fxLayoutGap="10px" >
+          <span (click)="OnROLExpiryItemClick('ROL Items')" [ngStyle]="{'cursor':mSelectedROLExpiryItem == 'ROL Items' ? 'auto':'pointer','color':mSelectedROLExpiryItem == 'ROL Items' ? '#666565':'#918f8f'}">ROL Items</span>
+          <span>|</span>
+          <span (click)="OnROLExpiryItemClick('Expiry Items')" [ngStyle]="{'cursor':mSelectedROLExpiryItem == 'Expiry Items' ? 'auto':'pointer','color':mSelectedROLExpiryItem == 'Expiry Items' ? '#666565':'#918f8f'}">Expiry Items </span>
+        </span>
+        <mat-icon matTooltip="Data View" class="open_in_new-icon" (click)="NavigatetoTransactionDocument('ROLItems_ExpiryItems')">open_in_new</mat-icon>
+      </div>
+      <div fxLayout="row" class="table-div-style" *ngIf="mROLExpiryItemsDataSource.length>0">
+        <mat-table #table [dataSource]="mROLExpiryItemsDataSource" fxFlex="100"  class="table-style">
+
+          <ng-container matColumnDef="ItemName">
+            <mat-header-cell *matHeaderCellDef fxFlex>Item</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex>
+              <span class="span-truncated-text-style" [matTooltip]=aData.ItemName>{{aData.ItemName}}</span>
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Value">
+            <mat-header-cell *matHeaderCellDef fxFlex="20" class="text-right-align">Value</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex="20" class="text-right-align">
+              <span> {{aData.Value}} </span>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="mDisplayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns:mDisplayedColumns;"></mat-row>
+        </mat-table>        
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" class="table-div-style" *ngIf="mROLExpiryItemsDataSource.length == 0">
+        <mat-icon matTooltip="Refresh" (click)="OnRefreshClick('ROLExpiryItems')" class="material-icons" >refresh</mat-icon>
+        <!-- <mat-icon matTooltip="Waiting" (click)="OnRefreshClick('ROLExpiryItems')" class="material-icons rotate" >sync</mat-icon> -->
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row" fxFlex="50" fxLayoutGap="10px">
+    <div fxLayout="column" fxFlex="20" class="div-border-style">
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="font-bold-div-style"> 
+        <span > Non Moving Items </span>
+        <mat-icon matTooltip="Data View" class="open_in_new-icon" (click)="NavigatetoTransactionDocument('NonMovingItems')">open_in_new</mat-icon>
+      </div>
+      <div fxLayout="row" class="table-div-style"  *ngIf="mNonMovingItemsDataSource.length>0">
+        <mat-table #table [dataSource]="mNonMovingItemsDataSource" fxFlex="100"  class="table-style">
+
+          <ng-container matColumnDef="ItemName">
+            <mat-header-cell *matHeaderCellDef fxFlex>Item</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex>
+              <span class="span-truncated-text-style" [matTooltip]=aData.ItemName>{{aData.ItemName}}</span>
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Value">
+            <mat-header-cell *matHeaderCellDef fxFlex="20" class="text-right-align">Day since</mat-header-cell>
+            <mat-cell *matCellDef="let aData;" fxFlex="20" class="text-right-align">
+              <span> {{aData.Daysince}} </span>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="mDisplayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns:mDisplayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" class="table-div-style" *ngIf="mNonMovingItemsDataSource.length == 0">
+        <mat-icon matTooltip="Refresh" (click)="OnRefreshClick('NonMovingItem')" class="material-icons" >refresh</mat-icon>
+        <!-- <mat-icon matTooltip="Waiting" (click)="OnRefreshClick('NonMovingItem')" class="material-icons rotate" >sync</mat-icon> -->
+      </div>
+    </div>
+
+    <div fxLayout="column" fxFlex="80" class="div-border-style">
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="font-bold-div-style"> 
+        <div fxLayout="column" fxFlex="100" fxLayoutAlign="start" style="padding: 0px 5px;">
+          <span style="font-weight: normal;font-size: 10px;"> Stock Trend </span>
+          <span style="font-weight: bold;">Monthly / Daily Consumption Vs Purchases</span>
+        </div>
+        <div fxLayout="column" fxFlex="20" >
+          <mat-radio-group [(ngModel)]="mSlectedStockTrendValue" (change)="OnChangeRadioButton($event)" style="width: 100%;">
+            <mat-radio-button value="Monthly">Monthly</mat-radio-button>
+            <mat-radio-button value="Daily">Daily</mat-radio-button>
+          </mat-radio-group>
+        </div>        
+        <mat-icon matTooltip="Data View" class="open_in_new-icon" (click)="NavigatetoTransactionDocument('StockTrend')">open_in_new</mat-icon>
+      </div>
+      <div fxLayout="row" fxFlex="85" style="overflow: hidden;padding: 0px 5px 5px 5px;" *ngIf="mItemDetails.length != 0">
+          <eds-double-bar *ngIf="IsShowBarGraph" [data]="mItemDetails" graphId="graph" [BarColors]="mBarColorsList" [styles]="{width:1200,height:250}"
+            [xLabel]="'ItemName'" xAxisShownLabel="Items" [YLabelList]="mYLableList" yAxisShownLabel="Value"
+            [AxisLabelSize]="{x:10,y:9,BarLabel:11}" [IsviewBox]="'false'" [Margin]="Margin"
+            [mXaxisLabelHeight]="mXaxisLabelHeight" viewBox="10 0 1250 300" [tooltip]="[mYLableList, 'ItemName']"
+            [IsTooltip]="'false'" [IsRandomDarkColor]="'false'" [IsRandomLightColor]="'false'"
+            (OnDataSelect)="OnDataSelect($event)"></eds-double-bar>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" class="table-div-style" *ngIf="mItemDetails.length == 0">
+        <mat-icon matTooltip="Refresh" (click)="OnRefreshClick('NonMovingItem')" class="material-icons" >refresh</mat-icon>
+        <!-- <mat-icon matTooltip="Waiting" (click)="OnRefreshClick('NonMovingItem')" class="material-icons rotate" >sync</mat-icon> -->
+      </div>
+    </div>
+  </div>
+</div>

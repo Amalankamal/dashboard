@@ -1,0 +1,16 @@
+@import "src/app/main/common/scss/common-style";
+
+:host {
+    ::ng-deep .pastlist-page-style {
+        height: calc(100vh - 40px);
+    }
+
+    ::ng-deep .page-content-style {
+        height: calc(100vh - 40px);
+        padding: 0px;
+    }
+    ::ng-deep.pastlist-card-page-style{
+        height: calc(100vh - 130px);
+        background-color: #f5dacd;
+    }
+}

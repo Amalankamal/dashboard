@@ -1,0 +1,85 @@
+::ng-deep .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float 
+.mat-form-field-label{
+    color: $Font_Blue; //Float Hint Color
+} 
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label{
+    color:$Font_Blue; //Hint Color
+}
+
+::ng-deep .mat-form-field-label{
+    font-size: 12px;
+}
+::ng-deep .mat-form-field-label-wrapper{
+    font-size: 12px;
+}
+
+
+::ng-deep .mat-input-element{
+    
+    caret-color: $Font_Blue;//cursor color
+    font-size: 12px;
+}
+
+::ng-deep .mat-form-field-infix{
+    color: $Font_Blue; //Input text color
+}
+
+
+::ng-deep  .mat-form-field-flex{
+    // height: 40px;
+    // line-height: 40px;
+    // align-items: center ;
+	font-size:12px;     
+}
+
+
+
+
+//Formfiled Style
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+//     opacity: 1 !important;
+//     color: #6384b6;
+// }
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+//     padding: 0.6em 0 0.8em 0 !important;
+//     color: #6384b6;
+// }
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-wrapper {
+//     margin: 0em 0 !important; 
+//     color: #6384b6;
+// }
+// ::ng-deep .mat-form-field-flex
+// {
+//     background-color: white;
+//     border-radius: 5px;
+// }
+// ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+//     background-color: transparent;
+// }
+// ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+//     color: gray;
+//     padding: 0px 10px;
+// }
+// ::ng-deep.mat-form-field-appearance-legacy .mat-form-field-infix {
+//     padding: .6375em 0;
+// }
+// ::ng-deep input.mat-input-element {
+//     margin-top: -.0625em;
+//     // margin-left:10px !important;
+//     padding: 0px 10px;
+//     width: -webkit-fill-available;
+// }
+
+// ::ng-deep .mat-form-field-underline
+// {
+//     background-color:transparent !important;
+// }
+// ::ng-deep.mat-form-field-ripple
+// {
+//     background-color:transparent !important;
+// }
+// ::ng-deep input:focus::placeholder {
+//     color: transparent !important;
+//   }
+

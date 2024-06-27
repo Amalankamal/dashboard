@@ -1,0 +1,15 @@
+export enum SCREEN_TYPE {
+	LOGIN = 1,
+	HOME = 2,
+	BLANK = 3,
+  DASHBOARD = 4,
+}
+
+
+export enum DISPLAY_TYPE {
+  NONE = 1,
+  HEADER_ONLY = 2,
+  FOOTER_ONLY = 3,
+  HEADER_AND_FOOTER_ONLY = 4,
+  HEADER_FOOTER_AND_SIDENAV = 5,
+}

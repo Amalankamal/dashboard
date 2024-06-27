@@ -1,0 +1,51 @@
+::ng-deep .app-header-theme{
+    height: 64px;
+    background-color: #03a9f4;
+    
+    padding: 20px; //top:12px ; Left & Right:20px ; Bottom:0px
+}
+
+::ng-deep .app-header-title{
+    font-size: 18px;
+    color:white;
+    font-weight: 500;
+}
+
+::ng-deep .header-button-theme{
+    width:100px;
+    height: 35px;
+    margin: 5px;
+    background: whitesmoke;
+    // color: white;
+    padding: 0px 5px 0px 5px;
+    font-size: 12px;
+
+    mat-icon{
+        color: black !important;
+    }
+
+    .app-header-button-style{
+        color: black;
+    }
+}
+
+::ng-deep .header-button-theme:not([disabled]):hover {
+    background-color: #9adefe; 
+}
+
+::ng-deep .header-button-theme:disabled,.header-button-theme[disabled]{
+    background-color: #cccccc; 
+
+    mat-icon{
+        color: black !important;
+        cursor:default;
+    }
+
+    .app-header-button-style{
+        color: black;
+    }
+}
+
+::ng-deep .mat-button-focus-overlay {
+    background-color: transparent; 
+}

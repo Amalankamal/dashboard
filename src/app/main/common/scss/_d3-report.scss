@@ -1,0 +1,330 @@
+.d3reportparentstyle{
+    display: flex;
+    flex-direction: column;
+}
+.d3reportdivstyle{
+    flex: 1;
+    overflow: auto;
+    height: 430px !important;
+    width: fit-content;
+    @include media-breakpoint-down('sm') {
+        width: auto;
+    }  
+}
+
+::ng-deep .d3-cell-width-300
+{
+    max-width: 300px;
+    min-width: 300px;
+}
+::ng-deep .d3-cell-width-200
+{
+    max-width: 200px;
+    min-width: 200px;
+}
+::ng-deep .d3-cell-width-180
+{
+    max-width: 180px;
+    min-width: 180px;
+}
+::ng-deep .d3-cell-width-150
+{
+    max-width: 150px;
+    min-width: 150px;
+}
+::ng-deep .d3-cell-width-100
+{
+    max-width: 100px;
+    min-width: 100px;
+}
+::ng-deep .d3-cell-width-95
+{
+    max-width: 95px;
+    min-width: 95px;
+}
+::ng-deep .d3-cell-width-90
+{
+    max-width: 90px;
+    min-width: 90px;
+}
+::ng-deep .d3-cell-width-80
+{
+    max-width: 80px;
+    min-width: 80px;
+}
+::ng-deep table
+{
+    border-spacing: 1px;
+}
+// ::ng-deep thead
+// {
+//     background-color: gray;
+//     color: white;
+//     height:40px;
+// }
+
+::ng-deep .top-row-style
+{
+    border-bottom: 1px solid white;
+    position:sticky;
+    top:0;
+    background-color: gray;
+}
+
+::ng-deep .top-second-row-style
+{
+    position:sticky;
+    top:41px;
+    background-color: gray;
+}
+
+// ::ng-deep tr
+// {
+//     height:40px;
+//     font-size: 12px;
+//     font-weight: normal;
+// }
+// ::ng-deep th
+// {
+//     background-color: gray;
+//     color: white;
+//     text-align: center!important;
+//     font-size: 12px;
+//     font-weight:normal;
+//     height:40px;
+// }
+// ::ng-deep td
+// {
+//     color: black;
+// }
+
+::ng-deep .td-align-right
+{
+    padding-right: 5px;
+    text-align: right;
+}
+
+::ng-deep .td-align-left
+{
+    padding-left: 5px;
+    text-align: left!important;;
+}
+
+// ::ng-deep .footer-row-style
+// {
+//     position:sticky;
+//     bottom:0;
+//     font-weight:bold;
+//     background-color:#98b5cd;
+// } 
+
+// ::ng-deep tr:nth-child(odd) {
+//     background-color:#d0dde8;
+// }
+
+// ::ng-deep tr:nth-child(even){
+//     background-color:#f5f5f5;
+// }
+
+::ng-deep .no-data-style
+{
+    text-align:center;
+    font-weight:bold;
+}
+::ng-deep .column-sticky
+{
+    left:0 !important;
+    z-index: 100 !important;
+    border-bottom: 1px solid white !important;
+    border-right: 1px solid white !important; 
+}
+::ng-deep .first-column-sticky
+{
+    background-color: #ccdae6;
+  //  background-color:#98b5cd;
+    position: sticky;
+    z-index:1!important;
+}
+
+
+::ng-deep.Header_style
+{
+   background-color: #d6d6c2;
+   color: black;
+}
+
+
+::ng-deep.Common_First_Headerstyle
+{
+    height:32px;
+    font-size: 13px;
+    font-weight: normal;
+    position: sticky;
+    top: 0;
+    bottom:0;
+    background: #f2f2f2;
+    z-index: 6;
+    font-size: 12px;
+    padding: 5px 10px;
+    color: #364c63;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-right: 1px solid #f2f2f2;
+
+}
+
+::ng-deep.Common_Second_Headerstylee
+{
+width:100px;
+height:40px;max-height:40px;
+font-size: 13px;font-weight: bold;
+position: sticky;
+top: 42px;
+bottom:0;
+background: #f2f2f2;
+z-index:4;
+font-size: 12px;
+padding: 5px 10px;
+color: #364c63;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+border-right: 1px solid #f2f2f2;
+
+
+}
+
+::ng-deep.Table_Row_Style
+{
+padding-left: 3px;
+left:0;
+top:0;
+right:0;
+bottom:auto;
+font-size: 12px;
+color: #364c63 !important;
+font-family: Arial, Helvetica, sans-serif !important;
+border-bottom: 1px solid #f2f2f2;
+border-right: 1px solid #f2f2f2;
+font-weight:100;
+
+}
+
+
+::ng-deep.Table_Body_Style
+{
+font-size: 12px;
+font-weight: normal;
+height: 40px;
+
+
+}
+
+::ng-deep.Table_Cells_Style
+{
+width: 100px;
+height:40px;
+font-size: 12px;
+font-weight: normal;
+top: auto;
+bottom:auto;
+z-index: 1;
+font-size: 12px;
+color: #364c63 !important;
+font-family: Arial, Helvetica, sans-serif !important;
+border-bottom: 1px solid #f2f2f2;
+border-right: 1px solid #f2f2f2;
+background-color:white !important;
+
+}
+
+::ng-deep.Sticky_Table_Cells{
+    left: 0;
+    position: sticky;
+    z-index:7;
+
+}
+
+::ng-deep.po_details
+{
+   position:sticky;
+   left:0;
+   z-index:5;
+}
+
+::ng-deep.po_details_Cell
+{
+   position:sticky;
+   left:0;
+   bottom:auto;
+   z-index:2;
+
+}
+
+::ng-deep.Sch_date
+{
+   position:sticky;
+   left:238px;
+   z-index:5;
+}
+
+::ng-deep.Sch_date_Cell
+{
+   position:sticky;
+   left:238px;
+   bottom:auto;
+   z-index:2;
+}
+
+
+::ng-deep.Sch_Qty
+{
+   position:sticky;
+   left:357px;
+   z-index:5;
+}
+
+::ng-deep.Sch_Qty_Cell
+{
+   position:sticky;
+   left:357px;
+   bottom:auto;
+   z-index:2;
+}
+
+::ng-deep.ScheduleDate_Cell{
+
+  position:sticky;
+  left:165px;
+  z-index:150
+}
+
+::ng-deep.BOMRatio_Cell{
+
+    position:sticky;
+    left:511px;
+    z-index:150
+  }
+
+
+  ::ng-deep.BOMItemCode_Cell{
+
+    position:sticky;
+    left:348px;
+    z-index:150
+  }
+
+
+  ::ng-deep.FGItemQty_Cell{
+
+    position:sticky;
+    left:259px;
+    z-index:150
+  }
+
+
+  ::ng-deep.BOMItemRequired_Cell{
+
+    position:sticky;
+    left:576px;
+    z-index:150
+  }

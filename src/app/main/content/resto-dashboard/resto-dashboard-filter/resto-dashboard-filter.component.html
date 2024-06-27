@@ -1,0 +1,100 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" class="main-div-style">
+  <div>
+    <mat-tab-group [selectedIndex]="mSelectedTabIndex" (selectedIndexChange)="OnTabChange($event)"
+      class="common-tab-style" *ngIf="false">
+      <mat-tab label="DashBoard">
+        <ng-template mat-tab-label>
+          <span [mdePopoverTriggerFor]="MenuPopover" [mdePopoverCloseOnClick]="false"
+            mdePopoverTriggerOn="click">{{mSelectedTabName}}</span>
+        </ng-template>
+        <mde-popover #MenuPopover="mdePopover" [mdePopoverOverlapTrigger]="false" [mdePopoverCloseOnClick]="false"
+          [mdePopoverOffsetX]="80" [mdePopoverOffsetY]="0">
+          <diV fxLayout="column" class="menu-popover-style">
+            <div *ngFor="let aSubMenu of mFormElementJSON" style="cursor: pointer;">
+              <div (click)="OnSlectedMenuClick(aSubMenu)"
+                style="line-height: 0px;font-size: 13px;min-height: 30px;align-items: flex-start;display: flex;background-color: #f2f2f2;min-width: 80px;align-items: center;padding: 0px 10px;">
+                <span>{{aSubMenu.MenuName}}</span>
+              </div>
+            </div>
+          </diV>
+        </mde-popover>
+      </mat-tab>
+    </mat-tab-group>
+
+    <button [mdePopoverTriggerFor]="MenuPopover" [mdePopoverCloseOnClick]="false" mdePopoverTriggerOn="click"
+      class="menu-button-style common-button-style">
+      <span>{{mSelectedTabName}}</span>
+    </button>
+    <mde-popover #MenuPopover="mdePopover" [mdePopoverOverlapTrigger]="false" [mdePopoverCloseOnClick]="false"
+      [mdePopoverOffsetX]="80" [mdePopoverOffsetY]="0">
+      <diV fxLayout="column" class="menu-popover-style">
+        <div *ngFor="let aSubMenu of mFormElementJSON" style="cursor: pointer;">
+          <div (click)="OnSlectedMenuClick(aSubMenu)"
+            style="line-height: 0px;font-size: 13px;min-height: 30px;align-items: flex-start;display: flex;background-color: #f2f2f2;min-width: 80px;align-items: center;padding: 0px 10px;">
+            <span>{{aSubMenu.MenuName}}</span>
+          </div>
+        </div>
+      </diV>
+    </mde-popover>
+
+  </div>
+  <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center" style="margin-right: 50px;">
+
+    <div fxLayout="column" fxLayoutGap="5px" fxLayoutAlign="center center">
+      <mat-label style="color: white !important;" class="content-font-style"
+        *ngIf="mSelectedCustomDatePicker != null && mSelectedCustomDatePicker.SelectedOption != undefined && (mSelectedCustomDatePicker.SelectedOption != 'Custom Days' || mSelectedDateFormat != 'Custom Days')">
+        <span style="font-weight: bold;">{{mCustomDateText}} : </span>
+        <span> {{mSelectedDateFormat}}</span>
+      </mat-label>
+      <div fxLayout="row" fxLayoutGap="5px"
+        *ngIf="mSelectedCustomDatePicker != null && mSelectedCustomDatePicker.SelectedOption != undefined && (mSelectedCustomDatePicker.SelectedOption == 'Custom Days' || mSelectedDateFormat == 'Custom Days')">
+        <span style="font-weight: bold; color: white !important;" class="content-font-style">{{mCustomDateText}} :
+        </span>
+        <span style="color: white !important;"
+          class="content-font-style">{{mSelectedCustomDatePicker.TransactionType_FromDate | date:'dd/MM/yyyy'}}</span>
+        <span style="color: white !important;" class="content-font-style">to</span>
+        <span style="color: white !important;"
+          class="content-font-style">{{mSelectedCustomDatePicker.TransactionType_ToDate | date:'dd/MM/yyyy'}}</span>
+      </div>
+    </div>
+
+    <mat-icon matTooltip="Date Selection" (click)="OnDateSelectionClick()"
+      [mdePopoverTriggerFor]="CustomDatePickerPopover" [mdePopoverCloseOnClick]="false" mdePopoverTriggerOn="click"
+      class="white-color-icon">date_range</mat-icon>
+
+    <mat-select disableRipple [(ngModel)]="mFinYear" class="mat-select-style"
+      (selectionChange)="OnFinYearChange($event)" *ngIf="false">
+      <mat-option value="Fin Year 2024 - 2025">Fin Year 2024 - 2025</mat-option>
+      <mat-option value="Fin Year 2023 - 2024">Fin Year 2023 - 2024</mat-option>
+      <mat-option value="Fin Year 2022 - 2022">Fin Year 2022 - 2022</mat-option>
+    </mat-select>
+
+    <mat-icon matTooltip="Home" (click)="OnHomeClick()" class="white-color-icon" *ngIf="ShowHomeIcon">home</mat-icon>
+
+    <mat-icon matTooltip="Refresh" (click)="OnRefreshClick()" class="white-color-icon">refresh</mat-icon>
+
+    <button matTooltip="Graphical View" (click)="GraphicalViewClick()" class="icon-button-style" *ngIf="false">
+      <mat-icon class="white-color-icon">equalizer</mat-icon>
+    </button>
+    
+    <mat-icon (click)="OnDataViewClick()" matTooltip="Data View" class="dataview-icon-style" *ngIf="false">view_list</mat-icon>
+
+    <!-- <span fxLayout="column" fxLayoutAlign="center center">
+      <button matTooltip="Graphical View" (click)="GraphicalViewClick()" class="icon-button-style">
+        <mat-icon class="white-color-icon">equalizer</mat-icon>
+      </button>
+      <span class="icon-span-style">Graphical View</span>
+    </span>
+    <span fxLayout="column" fxLayoutGap="5px" fxLayoutAlign="center center">
+      <mat-icon (click)="OnDataViewClick()" matTooltip="Data View" class="dataview-icon-style">view_list</mat-icon>
+      <span class="icon-span-style">Data View</span>
+    </span> -->
+  </div>
+</div>
+
+<mde-popover #CustomDatePickerPopover="mdePopover" [mdePopoverOverlapTrigger]="false" [mdePopoverCloseOnClick]="false"
+  style="margin-bottom: 0px !important;" [mdePopoverOffsetX]="mPopoverStyle?.PopoverOffsetX"
+  [mdePopoverOffsetY]="mPopoverStyle?.PopoverOffsetY" [mdePopoverArrowOffsetX]="399">
+  <app-customerdatepickerfilter *ngIf="mShowPopOver" [IsPendingDocDateChange]="mIsPendingDocDateChange"
+    [CustomDatePickerDetails]=mSelectedCustomDatePicker  [IsCurrentFinancialYear]="'true'"></app-customerdatepickerfilter>
+</mde-popover>

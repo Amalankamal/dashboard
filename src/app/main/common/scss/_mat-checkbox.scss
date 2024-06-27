@@ -1,0 +1,36 @@
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background{
+    background-color:$WAE_CheckBox_Color;
+}
+::ng-deep .mat-checkbox-frame{
+    border-color: $WAE_CheckBox_Color !important;// border color
+}
+::ng-deep .mat-checkbox-label{
+    font-size: 14px;
+}
+::ng-deep .mat-checkbox-inner-container{
+    height: 15px;
+    width: 15px;
+}
+::ng-deep .mat-checkbox-height{
+    line-height: 30px;
+}
+
+::ng-deep .mat-checkbox{
+    line-height: 50px;
+    height: 15px;
+    width: 15px;
+}
+
+
+
+::ng-deep .mat-selection-list .mat-list-option {
+    font-size: 14px;
+}
+::ng-deep .mat-pseudo-checkbox-checked {
+    background:  $WAE_CheckBox_Color !important;
+}
+
+::ng-deep .mat-pseudo-checkbox{
+    border-color: $WAE_CheckBox_Color !important;
+}

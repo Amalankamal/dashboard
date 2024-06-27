@@ -1,0 +1,208 @@
+//  &.bar-closed .report-options-panel {
+//     display: none;
+// }
+
+.router-style{
+    width: 100%;
+    padding: 15px;
+}
+
+.content-display-div-style{
+    width: 100%;
+    // margin-right: 15px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.auto-scroll-style{
+    overflow: auto !important;
+}
+
+.content-div-style{
+    @include media-breakpoint-down('sm') {
+        min-height: calc(100vh - 200px) !important;
+        max-height: calc(100vh - 200px) !important;
+        height: calc(100vh - 200px) !important;
+    }
+    // @include media-breakpoint-down('sm') {
+    //     min-height: 90% !important;
+    //     max-height: 90% !important;
+    //     height: 90% !important;
+    // }  
+    
+}
+
+.content-div-style-with-paginator{
+    @include media-breakpoint-down('sm') {
+        min-height: calc(100vh - 240px) !important;
+        max-height: calc(100vh - 240px) !important;
+        height: calc(100vh - 240px) !important;
+    }
+    // @include media-breakpoint-down('sm') {
+    //     min-height: 90% !important;
+    //     max-height: 90% !important;
+    //     height: 90% !important;
+    // }  
+    
+}
+
+.header-width-for-mobile{
+    @include media-breakpoint-down('sm') {
+        width: 100% !important;
+    }  
+}
+
+.page-header-style{
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    @include media-breakpoint('lt-sm'){
+        height: 40px;
+    }
+    
+}
+
+.align-items-center{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.report-options-panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 360px;
+    transform: translate3d(100%, 0, 0);
+    z-index: 999;
+    max-height: calc(78vh);
+    min-height: calc(78vh);
+    padding: 10px;
+    overflow: auto;
+
+    @include media-breakpoint-down('xs') {
+        top: -120px;
+        // max-height: calc(100vh - 100px);
+        width: 90vw;
+    }
+
+    @include media-breakpoint-down('sm') {
+        top : 0px !important;
+        width: 90vw;
+    }
+}
+
+.report-options-panel-overlay {
+    position: fixed;
+    display: block;
+    background: rgba(0, 0, 0, 0);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 998;
+
+    @include media-breakpoint-down('sm') {
+        background: rgba(0, 0, 0, 0.37);
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.open-button {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    width: 48px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0;
+    margin: 0;
+    pointer-events: auto;
+    opacity: .75;
+    z-index: 998;
+    background-color: #039be5 !important;
+    mat-icon {
+        animation: rotating 3s linear infinite;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.hide-GraphicalView-style{
+    height: 430px !important;
+    mat-table{
+        width: fit-content;
+        height:430px;
+        @include media-breakpoint-down('sm') {
+            width: auto;
+            overflow-x: auto;
+        }
+    }
+}
+.show-GraphicalView-style{
+    height: 220px !important;
+    @include media-breakpoint-down('sm') {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: auto !important;
+    }
+    mat-table{
+        width: fit-content;
+        height:220px;
+        @include media-breakpoint-down('sm') {
+            height: auto !important;
+            min-height: auto !important;
+            max-height: 210px !important;
+            width: auto;
+            overflow-x: auto;
+        }
+    }
+}
+
+.margin-Right-Paginator{
+    margin-right: 30px;
+}
+
+//Date picker styles start
+
+::ng-deep .mat-calendar-controls {
+    margin: 1% calc(33% / 7 - 16px) !important;
+}
+::ng-deep .mat-calendar-header {
+    padding: 0px 8px 0 8px !important;
+}
+
+::ng-deep .mat-datepicker-content .mat-calendar {
+    width: 296px !important;
+    height: 300px !important;
+}
+
+::ng-deep .mat-calendar-body-cell-content {
+    width: 55% !important;
+    height: 55% !important;
+}
+
+::ng-deep .mat-calendar-table-header th {
+    color: black;
+    background-color: white;
+}
+
+::ng-deep .mat-calendar-table-header tr{
+    height: 10px;
+}
+
+::ng-deep .mat-calendar-body tr{
+    background-color: white !important; 
+}
+::ng-deep .mat-calendar {
+    display: table !important;
+}
+//Date picker styles end

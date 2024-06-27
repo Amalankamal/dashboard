@@ -1,0 +1,47 @@
+<div fxLayout="column" class="main-div-style">
+    <div>
+        <mat-radio-group class="radio-group-style" [(ngModel)]="mSelectedOption"
+            (change)="onOptionChange(mSelectedOption)">
+            <mat-radio-button class="radio-button-style" *ngFor="let aOption of mOptionsList" [value]="aOption">
+                {{aOption}}
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <form [formGroup]="mActivityForm" style="height: 55px;display:flex;align-items: center;padding-left: 7px;">
+        <mat-form-field appearance="standard" class="mat-form-field-style" style="margin-right: 10px;">
+            <div (click)="mSelectedOption=='Custom Days'?(FromDatePicker.open()):false" class="Datepicker-card">
+                <div fxLayout="row" fxLayoutGap="5px">
+                    <span class="material-icons" style="font-size: 17px;color:Green">
+                        arrow_upward
+                    </span>
+                    <input matInput [matDatepicker]="FromDatePicker" appearance="none"
+                        (dateChange)="onFromDateChange($event.target.value)" formControlName="FromDate"
+                        [max]="mCurrentDate" [min]="mAllowedMinDate">
+                    <mat-datepicker #FromDatePicker></mat-datepicker>
+                </div>
+            </div>
+        </mat-form-field>
+
+        <mat-form-field appearance="standard" class="mat-form-field-style">
+            <div (click)="mSelectedOption=='Custom Days'?(ToDatePicker.open()):false" class="Datepicker-card">
+
+                <div fxLayout="row" fxLayoutGap="5px">
+                    <span class="material-icons" style="font-size: 17px;color:Red">
+                        arrow_downward
+                    </span>
+                    <input matInput [matDatepicker]="ToDatePicker" formControlName="ToDate" [max]="mCurrentDate"
+                        [min]="mFromDate" (dateChange)="onToDateChange($event.target.value)">
+                    <mat-datepicker #ToDatePicker></mat-datepicker>
+                </div>
+            </div>
+        </mat-form-field>
+    </form>
+
+
+    <div style="display: flex;justify-content:flex-end;z-index: 50;margin-top: 5px;" fxLayout="row" fxLayoutGap="10px">
+        <button class="common-button-style" style="width: 65px;" (click)="onCancelButtonClick()">Cancel</button>
+
+        <button class="common-button-style" style="width: 65px;" (click)="onOkButtonClick()">OK</button>
+    </div>
+</div>

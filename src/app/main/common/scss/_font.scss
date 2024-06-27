@@ -1,0 +1,48 @@
+@import "color-code";
+.heading-font-style
+{
+    font-size: 12px;
+    color:$Font_Blue;
+    font-family: $WAE_Font; 
+}
+.heading-font-bold-style
+{
+    font-size: 12px !important;
+    color:$Font_Blue !important;
+    font-family: $WAE_Font; 
+    font-weight: bold;
+}
+.subheading-font-style
+{
+    font-size: 11px;
+    color:$Font_Blue;
+    font-family: $WAE_Font; 
+}
+
+//Content Blue
+.content-font-bold-style
+{
+    font-size: 12px;
+    color:$Font_Blue;
+    font-family: $WAE_Font; 
+    font-weight: bold;
+}
+.content-font-style
+{
+    font-size: 12px;
+    color:$Font_Blue;
+    font-family: $WAE_Font; 
+}
+.subcontent-font-bold-style
+{
+    font-size: 11px;
+    color:$Font_Blue;
+    font-family: $WAE_Font; 
+    font-weight: bold;
+}
+.subcontent-font-style
+{
+    font-size: 11px;
+    color:$Font_Blue;
+    font-family: $WAE_Font; 
+}

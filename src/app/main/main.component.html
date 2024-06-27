@@ -1,0 +1,25 @@
+<mat-drawer-container autosize>
+
+  <div fxLayout="row">
+    <div [ngClass]="mDisplayType==5?'main-div-style main-div-style_DT5':'main-div-style main-div-style_DT1-4'"
+      fxLayout="column">
+
+      <div
+        [ngClass]="(mDisplayType == 1 || mDisplayType == 3)?'header-div-display-none-style':'header-div-display-block-style'">
+        <app-header></app-header>
+      </div>
+
+      <div [ngClass]="{'content-div-style_HP1':mScreenType==1037, 'content-div-style_DT1': mDisplayType==1,
+          'content-div-style_DT2': (mDisplayType==2), 'content-div-style_DT3': mDisplayType==3,'content-div-style_DT4-5': (mDisplayType==4 || mDisplayType==5) }">
+        <router-outlet></router-outlet>
+      </div>
+
+      <div [ngClass]="(mDisplayType==1 || mDisplayType==2)?'footer-div-display-none-style':'footer-div-display-block-style'">
+        <app-footer></app-footer>
+      </div>
+
+    </div>
+
+
+  </div>
+</mat-drawer-container>

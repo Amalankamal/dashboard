@@ -1,0 +1,23 @@
+@import "_color-code";
+mat-expansion-panel{
+    margin-bottom: 2px;
+}
+
+mat-expansion-panel-header{
+    padding: 0px 10px;
+}
+
+.mat-expansion-panel-mat-form-field{
+    width: 100%;
+}
+
+::ng-deep .expansion-panel-style
+{
+    .mat-expansion-panel:not([class*=mat-elevation-z]) {
+        box-shadow:none !important;
+    }
+    .mat-expansion-panel-header {
+        font-family:$WAE_Font !important;
+       
+    }
+}

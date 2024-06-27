@@ -1,0 +1,215 @@
+@import "src/app/main/common/scss/common-style";
+
+:host {
+
+    .header-div-style {
+        align-items: center;
+        display: flex;
+        position: relative;
+        //  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+        background-color: white;
+        padding: 10px;
+        min-height: 40px;
+        max-height: 40px;
+    }
+
+    .logo-img-style {
+        height: 50px;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .menu-icon-style {
+        color: #f68136;
+        cursor: pointer;
+        // padding: 13px 5px 12px 5px;
+        background-color: #364c63;
+        // font-size: 30px;
+        width: 62px;
+        height: 58px;
+        padding: 7px 5px 5px 0px;
+        // line-height: 34px;
+    }
+
+    .header-items-div-style {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0px 10px;
+        height: 40px;
+        align-items: center;
+    }
+
+    .application-name-div-style {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+    }
+
+    .application-name-label-style {
+        font-size: 20px;
+        align-items: center;
+        display: flex;
+        color: #454545;
+        font-size: 20px;
+        // font-family: 'Poppins','Cairo','Helvetica','Arial',sans-serif;
+        font-weight: 700;
+        padding: 10px 0px;
+    }
+
+    .mat-icon-style {
+        font-size: 30px;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        color: #364c63;
+    }
+
+    .avatar {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 8px 0 0;
+        border-radius: 50%;
+        font-size: 17px;
+        font-weight: 500;
+        text-align: center;
+        color: #FFFFFF;
+
+        &.square {
+            border-radius: 0;
+        }
+
+        &.small {
+            width: 20px;
+            min-width: 20px;
+            height: 20px;
+            line-height: 20px;
+        }
+
+        &.big {
+            width: 72px;
+            min-width: 72px;
+            height: 72px;
+            line-height: 72px;
+        }
+
+        &.huge {
+            width: 96px;
+            min-width: 96px;
+            height: 96px;
+            line-height: 96px;
+        }
+    }
+
+    .avatar-wrapper {
+        position: relative;
+
+        .avatar {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        mat-icon.status {
+            position: absolute;
+            top: 28px;
+            left: 28px;
+        }
+    }
+
+    ::ng-deep .mat-menu-panel {
+        min-width: 150px !important;
+    }
+
+    .NotificationsPopoverDivStyle {
+        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
+        background: white !important;
+        padding: 0px;
+        width: 300px;
+        border-radius: 10px;
+    }
+
+    .Orange-style {
+        color: $Theme_Orange !important;
+    }
+
+
+    .Organisation-Label-Style {
+        font-size: 10px;
+        font-weight: 500;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        color: $Font_Orange;
+        letter-spacing: 0.5px;
+        font-family: $WAE_Font;
+        cursor: pointer;
+    }
+
+    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+        border-radius: 0px;
+        padding: 0px 0px 4px 0px;
+        font-size: 10px;
+        color: $Font_Blue;
+    }
+
+    ::ng-deep .mat-form-field-wrapper {
+        padding-bottom: 0px;
+    }
+
+    .search-bar-style {
+        width: 60%;
+        margin-right: 10px;
+        overflow: hidden;
+    }
+
+    .mat-badge-content {
+        background: $Theme_Orange;
+        color: white;
+    }
+
+    .mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
+        right: -14px;
+        top: -6px;
+    }
+
+    .suppliername-style {
+        font-size: 14px;
+        font-weight: bold;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        text-transform: capitalize;
+        color: $Theme_Blue !important;
+    }
+
+    .organazation-name-style {
+        color: $Theme_Orange;
+        cursor: pointer;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    .organazation-validitydate-style {
+        color: $Theme_Blue;
+        cursor: pointer;
+        font-size: 11px;
+    }
+
+    .profile-image {
+        width: 28px;
+        height: 28px;
+    }
+
+    .logo{
+        // display: block;
+        margin-left: 10px;
+        max-width: 220px;
+        max-height: 45px;
+        height: auto;
+        vertical-align: top;
+        border: none;
+    }
+}

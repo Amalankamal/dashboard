@@ -1,0 +1,47 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px"  class="page-style" *ngIf="mShowOverlayDiv">
+  <div fxLayout="row" class="content-style">
+    <div fxLayout="column" class="login-page-style" fxFlex="100" fxLayoutAlign="start center" fxFlex.lt-lg="100">
+      <div class="logo-div-style" fxFlex="30" fxLayoutAlign="center center">
+        <div >
+          <img src="assets/logo/brand_logo1.png" class="login-brand-logo-style">
+        </div>
+      </div>
+      <div fxLayout="column" fxLayoutGap="3px" fxFlex="22" class="login-text-div-style">
+        <span class="login-hello-text-style">Hello!</span>
+        <span class="login-subcontent-text-style">Sign in to your account to continue</span>
+      </div>
+      <form [formGroup]="mLoginForm" class="width-300">
+        <div fxLayout="column" class="login-div-style">
+          <div fxLayout="column" fxFlex="100">
+  
+            <mat-form-field fxFlex="100" appearance="outline">
+              <input matInput #UserName id="UserName" formControlName="UserName" placeholder="Username" required>
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+            <mat-form-field fxFlex="100" appearance="outline">
+              <input matInput #Password formControlName="Password" placeholder="Password"
+                [type]="hide ? 'password' : 'text'" (keyup.enter)="OnLoginButtonClick()" required>
+              <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>
+          </div>
+  
+        </div>
+      </form>  
+      <div fxLayout="row" fxLayoutAlign="center center" style="width: 33%;">
+        <button mat-raised-button fxFlex="" (click)="OnLoginButtonClick()" type="button"
+          class="common-button-style login-button-style">LOG IN</button>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="flex-end end" class="width-300">
+    <span class="subcontent-font-bold-style">Version {{mAppVersion}}</span>
+  </div>
+</div>
+
+<div fxLayout="row" class="page-style" fxLayoutAlign="center center" *ngIf="!mShowOverlayDiv" class="sync-page-style">
+  <div fxLayout="column" fxLayoutGap="3px" fxLayoutAlign="center center" class="login-text-div-style">
+      <span class="login-subcontent-text-style"> Screen Is Loading ...</span>
+      <mat-icon (click)="OnSyncClick()" class="sync-icon-style">sync</mat-icon>
+  </div>
+</div>
+

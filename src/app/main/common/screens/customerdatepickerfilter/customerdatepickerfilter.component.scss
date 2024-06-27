@@ -1,0 +1,103 @@
+@import "src/app/main/common/scss/common-style";
+
+:host
+{
+.radio-group-style {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+   
+  }
+  ::ng-deep .mat-form-field-underline {
+      display: none;
+    }
+  .radio-button-style {
+    margin: 5px;
+  }
+ 
+  .Datepicker{
+      display: flex;
+    //   margin-left: 50px;
+      margin-top: -30px;
+      width:100%;
+      align-items: center;
+  }
+  .mat-form-field-style{
+      font-size: 15px;color: $Theme_Blue;
+      font-family: $WAE_Font !important;
+      width:38.5%;padding-right:10px;
+      height: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .time-icon{
+      filter: invert(71%) sepia(40%) saturate(39%) hue-rotate(473deg) brightness(67%) contrast(37%);
+      height: 18px;
+      width: 18px;
+  }
+  .card-heading
+  {
+      font-size:12px;
+      font-weight: bold;
+  }
+  
+  .DateCard
+  {
+      font-size: 11px;
+      width: fit-content;
+      color:  $Theme_Blue;
+      padding: 3px;
+      border-radius: 5px;
+      margin-top: 5px;
+  }
+  
+  
+  ::ng-deep.mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+      background-color:$Font_Orange !important;
+  }
+  
+  
+  ::ng-deep.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+      border-color: $Font_Orange !important;
+  }
+  
+  
+  
+  ::ng-deep.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+      background-color: $Font_Orange !important;
+  }
+  
+  .Datepicker-card{
+      background-color: white;
+      display:flex;
+      padding: 4px 5px 4px 5px;
+      color:  $Theme_Blue;
+      border:1px solid #F2C6A5;
+      width: 90px;
+  }
+  .main-div-style
+  {
+    font-size: 15px;
+    font-family: $WAE_Font;
+    overflow: hidden;
+    background: $Theme_Orange_Foreground;
+    padding: 10px;
+    width: 60%;
+    border-radius: 5px;
+  }
+ .date-text-style
+ {
+    font-size: 12px;
+    font-family: $WAE_Font;
+    color:  $Theme_Blue;
+    font-weight: 500;
+ }
+ .input:disabled
+ {
+     color: black;
+ }
+ .mat-form-field-wrapper
+ {
+     padding: 0em !important;
+ }
+}

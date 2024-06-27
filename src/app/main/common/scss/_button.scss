@@ -1,0 +1,169 @@
+@import "color-code";
+::ng-deep .mat-raised-button{
+    width:100px;
+    height: 35px;
+    margin: 5px;
+    background: #03a9f4;
+    color: white;
+    padding: 0px 5px 0px 5px;
+    font-size: 12px;
+}
+
+::ng-deep .mat-raised-button:not([disabled]):hover {
+    background-color: #9adefe; 
+    color: white;
+}
+
+::ng-deep .mat-raised-button:disabled,.mat-raised-button[disabled]{
+    background-color: #9adefe; 
+    color: white;
+}
+
+/* mat-flat-button Style */
+::ng-deep .mat-flat-button:not([class*=mat-elevation-z])
+{
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+    padding:0px 5px;
+}
+// ::ng-deep .mat-flat-button
+// {
+//     color: green;letter-spacing: 1px;font-size: 12px; 
+//     span{
+//         color: green;letter-spacing: 1px;font-size: 12px; 
+//     }
+// }
+.cancel-button-style
+{
+    font-size: 14px;
+    background-color: orange;
+    min-width: 100px;
+    max-width: 100px;
+    height: 30px;
+    color: white;letter-spacing: 1px;font-size: 12px; 
+    span{
+        color: white;letter-spacing: 1px;font-size: 12px; 
+    }
+    .mat-icon
+    {
+        color: white; 
+    }
+}
+.save-button-style
+{
+    font-size: 14px;
+    background-color: #0088cc;
+    min-width: 100px;
+    max-width: 100px;
+    height: 30px;
+    color: white;letter-spacing: 1px;font-size: 12px; 
+    span{
+        color: white;letter-spacing: 1px;font-size: 12px; 
+    }
+    .mat-icon
+    {
+        color: white; 
+    }
+}
+
+::ng-deep .mat-flat-button:disabled,.mat-raised-button[disabled]{
+    background-color: $WAE_Button_Bg_Color !important; 
+    color: white;
+    opacity: 0.5;
+}
+
+.common-button-style{
+    font-size: 12px;
+    background-color: $WAE_Button_Bg_Color;
+    border-radius: 4px;
+    font-family: $WAE_Font;
+    height: 26px;
+    border: none;
+    color:$WAE_Button_Text_Color !important;
+    cursor: pointer;
+    span{
+        color:$WAE_Button_Text_Color;
+        letter-spacing: 1px; 
+        font-size: 12px;
+        font-family: $WAE_Font;
+        justify-content: center;
+        width: 100%;
+    }
+    .mat-icon
+    {
+        color: $WAE_Button_Icon_Color; 
+    }    
+}
+.mat-mini-fab
+{
+    background-color: $WAE_Button_Bg_Color ;
+    .mat-icon
+    {
+        color: white ;
+    }
+}
+
+.mat-fab
+{
+    background-color: $WAE_Button_Bg_Color ;
+    .mat-icon
+    {
+        color: white ;
+    }
+}
+
+.common-fab-button-style
+{
+    background-color: $WAE_Button_Bg_Color ;
+    height: 30px;
+    width: 30px;
+    .mat-icon
+    {
+        color: white ;
+        height: 18px !important;
+        width: 18px !important;
+        font-size: 18px !important;
+        line-height: 12px;
+    }
+    ::ng-deep .mat-button-wrapper
+    {
+        display: contents !important;
+    }
+}
+
+button:active {
+outline: none;
+border: none;
+}
+
+button:focus {outline:0;}
+
+button:disabled,
+button[disabled]{
+        // background-color: #cccccc !important;
+        color: #666666 !important;
+}
+
+// Mat Slide Toggle
+::ng-deep .mat-slide-toggle-thumb {
+    width: 10px !important;
+    height: 10px !important;
+    transform: translate(50%, 50%);
+}
+
+::ng-deep .mat-slide-toggle-bar {
+  background-color: #000;
+  border-radius: 15px !important;
+  height: 16px !important;
+}
+
+::ng-deep .mat-slide-toggle-thumb-container {
+  top: -2px !important;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: $Theme_Orange !important;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: #fff;
+}

@@ -1,0 +1,42 @@
+::ng-deep .dialog-content-wrapper {
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+
+    .mat-radio-button~.mat-radio-button {
+        padding-right: 16px;
+    }
+
+    .mat-radio-label-content {
+        padding-left: 8px;
+        padding-right: 20px;
+    }
+
+    .dialog-title {
+        color: white;
+        font-size: 14px;
+    }
+
+    mat-toolbar {
+        min-height: 45px;
+        background-color: #03a9f4;
+    }
+
+    mat-toolbar-row {
+        max-height: 45px;
+    }
+
+    mat-icon {
+        color: white !important;
+        cursor: pointer;
+    }
+
+    .mat-checkbox {
+        line-height: 35px;
+    }
+
+    .mat-dialog-actions-padding {
+        padding: 0px 16px 16px !important;
+        margin: 0px;
+    }
+}

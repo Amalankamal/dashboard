@@ -1,0 +1,28 @@
+:host ::ng-deep .mat-card-header-text{
+    width: 100% !important;
+}
+
+mat-card{
+    height: 100%;
+ padding: 0px;
+//  border-radius: 5px;
+ cursor: pointer;    
+}
+
+mat-card-title{
+ text-align: left;
+ margin: 0px;
+ padding: 7px 0px;
+}
+
+mat-card-content{
+ margin: 0px 8px;
+//  height: 90%;
+// overflow-x: auto; 
+overflow-y: auto;
+}
+
+mat-card-header{
+    // background-color: gray;
+    color: black;
+}

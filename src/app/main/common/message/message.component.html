@@ -1,0 +1,27 @@
+<div class="dialog-content-wrapper">
+    <mat-toolbar class="toolbar-color">
+        <mat-toolbar-row fxFlex fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="heading-font-bold-style" style="color: white !important;">{{MessageTitle}}</span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div mat-dialog-content class="dialog-message-div-style">
+        <mat-label id="MessageData" style="white-space: pre-wrap"
+            class="content-font-style">{{MessageDetails}}</mat-label>
+    </div>
+
+    <div mat-dialog-actions class="mat-dialog-actions-padding" fxLayout="row" fxLayoutGap="15px"
+        fxLayoutAlign="flex-end">
+
+        <button class="common-button-style" id="BtnMessageCancel" (click)="aMessageDialogRef.close(['Cancel'])"
+            *ngIf="CancelButtonVisible" aria-label="Cancel" style="width: 90px;" fxLayout="row"
+            fxLayoutAlign="center center">
+            <span>{{Cancellabel}}</span>
+        </button>
+        <button class="common-button-style" id="BtnMessageOk" style="margin-left: 20px"
+            (click)="aMessageDialogRef.close(['Ok'])" *ngIf="OkButtonVisible" aria-label="Ok" style="width: 90px;"
+            fxLayout="row" fxLayoutAlign="center center">
+            <span>{{Oklabel}}</span>
+        </button>
+    </div>
+</div>

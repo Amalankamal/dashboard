@@ -1,0 +1,29 @@
+@import "_font";
+ul.breadcrumb {
+    // padding: 10px 16px;
+    list-style: none;
+    // background-color: #eee;
+    padding: 0px;margin: 0px;
+  }
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+  }
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color:  $Theme_Blue;
+    content: ">\00a0";
+  }
+  ul.breadcrumb li a {
+    color: $Theme_Blue;
+    // text-decoration: none;
+  }
+  ul.breadcrumb li a:hover {
+    color: $Theme_Blue;
+    // text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .selected-page-font-weight{
+    font-weight: bold;
+  }

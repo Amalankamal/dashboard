@@ -1,0 +1,78 @@
+@import "src/app/main/common/scss/common-style";
+
+:host {
+    .icon-span-style {
+        font-size: 12px;
+        // font-weight: bold;
+        font-family: $WAE_Font;
+        line-height: 17px;
+    }
+
+    .icon-button-style {
+        border-radius: 100px;
+        padding: 0px !important;
+        width: 35px;
+        height: 35px;
+        background: #039be5 !important;
+        border: #039be5 !important;
+    }
+
+    .dataview-icon-style{
+        width: 35px !important;
+        height: 35px !important;
+        line-height: 35px;
+        text-align: center;
+        border-radius: 19px;
+        color: #fff !important;
+        cursor: pointer;
+    }
+
+    .mat-select-style{
+        width: 150px;
+        font-family: $WAE_Font;
+        ::ng-deep.mat-select-value-text{
+            color: white !important;
+        }
+        ::ng-deep.mat-select-arrow{
+            color: rgba(255,255,255,.5);
+        }
+    }
+    
+
+    .main-div-style {
+        // background-color: #f2f2f2 !important;
+        min-height: 50px;
+        padding: 5px;
+        background-color: #2d323e!important;
+        color: rgba(255,255,255,.87)!important;
+    }
+
+    .white-color-icon {
+        color: white !important;
+    }
+
+    .common-tab-style {
+
+        ::ng-deep.mat-tab-label.mat-tab-label-active:not(.mat-tab-disabled),
+        .mat-tab-label.mat-tab-label-active.cdk-keyboard-focused:not(.mat-tab-disabled) {
+            background-color: #039be5 !important;
+            color: white !important;
+        }
+
+        ::ng-deep.mat-tab-label {
+            background-color: #83bff7 !important;
+            color: white !important;
+        }
+    }
+
+    .menu-popover-style {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background: white !important;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .menu-button-style{
+        background-color: #039be5 !important;
+    }
+}

@@ -1,0 +1,21 @@
+@import '_color-code';
+
+::ng-deep .mat-radio-label-content{
+    font-size: 12px;
+    padding-left: 8px;
+    padding-right: 20px;
+}
+
+::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+    border-color: $Font_Blue;  //Selected radio button outer ring color
+}
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle{
+    background-color:  $Font_Blue; //Selected radio button inner color
+}
+
+::ng-deep .mat-radio-outer-circle{
+    border-color: #124353; //Unselected radio button color
+}
+::ng-deep .label{
+    font-size: 12px;
+}

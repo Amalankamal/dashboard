@@ -1,0 +1,22 @@
+@import 'color-code';   
+    ::ng-deep .mat-option-text{
+        font-size: 11px !important;
+        color: $Font_Blue !important; //Option text color
+        font-family: $WAE_Font !important;
+        white-space: normal;
+    }
+    
+    ::ng-deep .mat-select-value-text{
+        font-size: 12px !important;
+        color: $Font_Blue !important; //Mat Input selected text color
+        font-family: $WAE_Font !important;
+    }
+
+    ::ng-deep .mat-select-panel mat-option.mat-option {
+        height: unset;
+      }
+      ::ng-deep .mat-option {
+        line-height: 15px !important;
+        padding: 5px 10px !important;
+        height: unset !important;
+      }

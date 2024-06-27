@@ -1,0 +1,43 @@
+<div fxLayout="column" class="pastlist-card-page-style">
+  <div fxLayout="row" fxFlex="12" fxLayoutGap="10px" style="background: #ffffff;padding: 0px 5px;">
+    <mat-form-field appearance="outline">
+      <mat-select disableRipple [(ngModel)]="mSelectedLocations" placeholder="Locations" (selectionChange)="OnselectionChange($event,'Locations')">
+        <mat-option *ngFor="let aData of mLocationsList" [value]="aData">{{ aData.Locations }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline">
+      <mat-select disableRipple [(ngModel)]="mSelectedOrder" placeholder="Order" (selectionChange)="OnselectionChange($event,'Order')">
+        <mat-option *ngFor="let aData of mOrderList" [value]="aData">{{ aData.Order }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+  </div>
+
+  <div fxLayout="row" fxLayoutGap="10px" class="flexwrap-div-style">
+    <div class="mat-card-style" *ngFor="let aData of mPurchaseDetailslist">
+      <div fxLayout="column" fxFlex="100" class="matcard-div-style">
+        <div fxLayout="row" fxLayoutAlign="space-between flex-end" class="matcardheader-div-style">
+          <span class="matcardheader-span-text-style">{{aData.DisplayName}}</span>
+          <mat-icon matTooltip="Data View" class="open_in_new-icon">open_in_new</mat-icon>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px" fxFlex style="padding: 5px;"
+          *ngIf="aData.IsDismel">
+          <div fxLayout="column" fxLayoutAlign="start" class="text-style">
+            <span>{{aData.CurrencyName}}</span>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="start center" class="text-style">
+            <span style="font-weight: 600;font-size: 24px;color: black;">{{aData.Value}}</span>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px" fxFlex style="padding: 5px;"
+          *ngIf="aData.IsPercentage">
+          <div fxLayout="column" fxLayoutAlign="start center" class="text-style">
+            <span style="font-weight: 600;font-size: 24px;color: black;">{{aData.Value}} %</span>
+            <span>{{aData.CurrencyName}} {{aData.Value}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

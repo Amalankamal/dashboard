@@ -1,0 +1,18 @@
+<mat-drawer-container autosize class="pastlist-page-style" style="position:fixed !important;width: 100% !important;">
+  <div>
+    <div class="page-content-style">
+      <div>
+        <app-resto-dashboard-filter></app-resto-dashboard-filter>
+      </div>
+      <div *ngIf="mScreenName == 'Inventory'">
+        <app-inventory-dashboard></app-inventory-dashboard>
+      </div>
+      <div *ngIf="mScreenName == 'Purchase'">
+        <app-purchase-dashboard></app-purchase-dashboard>
+      </div>
+    </div>
+  </div>
+  <mat-drawer #drawer mode="over" position="end" (closed)="OnDrawerClose()">
+
+  </mat-drawer>
+</mat-drawer-container>
